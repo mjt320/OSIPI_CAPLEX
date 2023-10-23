@@ -1,18 +1,27 @@
 
 <b><font color=#FF0000>This section is currently work in progress</font></b>
 
+<b><font color=#FF0000>If you follow this tutorial but find yourself stuck, please submit an issue in the <a id="tutorialIssue" href="https://github.com/OSIPI/OSIPI_CAPLEX/issues">github repository</a> and include all steps you have taken and the full traceback to the error you've encountered so we may improve this page.</font></b>
+
 This is a basic tutorial on how to contribute to the website if you've never used github, git or written any code for a website before.
 
 It is advised to use a context manager and an IDE (integrated development environment) to avoid many problems that arise when setting things up. I would recommend using [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html){target = "_blank"} which installs the `conda` context manager. Conda comes bundles with several IDEs, but for this tutorial we will use Visual Studio Code (VSCode). Use the link to install Anaconda, VSCode can be installed once we set up an environment.
 
-### Set up conda environment
+## Set up conda environment
 Advantage of using conda environments is the ability to have multiple versions of 
 python and its packages (it's also easier to remedy mistakes if you break your python).
 
 TO DO: Rewrite this so anaconda prompt is used for installation of venv and vscode.
 
-1. Create a new conda environment
-<br>`conda create -n CAPLEX python`
+TO DO: Recommend useful vscode extensions
+
+TO DO: Explain how to initialise a github repo
+
+TO DO: Explain commit, push and pull request and how to do each one of them.
+
+### 1. Create a new conda environment
+
+`conda create -n CAPLEX python`
 <br>This creates a new environment called 'CAPLEX' with the latest version of 
 python supported by your conda version. Once python has been configured you will
  be asked whether to proceed so just press enter. Wait for python to download 
@@ -20,11 +29,14 @@ and install.
 
     ![(new conda env)](tutorialImgs/new conda env.png)
 
-2. Activate your new environment
-<br>run `conda activate CAPLEX`
+### 2. Activate your new environment
+
+run `conda activate CAPLEX`
 <br>(base) should change into (CAPLEX) in the terminal.
-3. Install mkdocs-material
-<br>This is available either through pip or conda-forge. Whatever you choose to 
+
+### 3. Install mkdocs-material
+
+This is available either through pip or conda-forge. Whatever you choose to 
 use for installation **do not switch between them within one environment**. This 
 may cause issues where your packages cannot find each other due to being on 
 different channels. So that you may install other packages with pip, this 
@@ -48,26 +60,89 @@ ordered list of packages including mkdocs-material.
 
     If you cannot see the terminal at the bottom of your VSCode window, either press `Ctrl+Shift+'` or in the upper left side of VSCode window find Terminal and click New Terminal.
 
-??? question "What if I messed up and this env doesn't work?"
+??? question "What if I made a mistake and this environment is broken?"
 
     In this case you can simply delete the environment and remake it. Just don't delete (base) and don't change (base) unless you know what you're doing.
     Firstly deactivate the environment using `conda deactivate` so you're back to (base). Then run `conda remove -n ENV_NAME --all` replace ENV_NAME by CAPLEX or other name you chose.
 
-### Work on a local version of the website
+## Work on a local version of the website
 
-Build a local version of the site so you can see changes take place immediately. Use the `cd` command to guide your terminal into the folder containing the `mkdocs.yml` file. You can see the current path right next to (CAPLEX) in your terminal (1). Once you're done, run `mkdocs serve` which will build a local version of the website. At the bottom on your terminal the final line will contain the address 127.0.0.1:8000. Hold CTRL and click on it to open in your default browser (best to move it to second monitor with VSCode open on your primary monitor).
+Build a local version of the site so you can see changes take place immediately. Use the `cd` command to guide your terminal into the folder containing the `mkdocs.yml` file. You can see the current path right next to (CAPLEX) in your terminal (1). Once you're done, run `mkdocs serve` which will build a local version of the website. At the bottom on your terminal the final line will contain the address 127.0.0.1:8000. Hold CTRL and click on it to open in your default browser (best to move it to second monitor with VSCode open on your primary monitor). Now whenever you save any file you've worked on the local version of the website will automatically be rebuilt.
 { .annotate }
 
-1.  When you write `cd ./` you can press **tab** to scroll through paths found in a particular   folder, saving you typing long folder names.
+1.  When you write `cd .\` you can press **tab** to scroll through paths found in a particular   folder, saving you typing long folder names.
 
 ![(mkdocs serve highlight)](tutorialImgs/mkdocs serve highlight.png)
 
-??? warning "Working on a mac"
-
-    In case you are using mac to contribute, make sure to navigate to the lower right side of your VSCode window and switch `LF` to `CRLF` and make sure to do this on all files you open.<br>![(CRLF)](tutorialImgs/CRLF.png)
-
-### Where to find documentation
+## Where to find documentation
 
 This website is built using [mkdocs-material](https://squidfunk.github.io/mkdocs-material/){target = "_blank"}.<br>
 Equations are rendered using [MathJax version2.7.7](https://docs.mathjax.org/en/v2.7-latest/){target = "_blank"}.<br>
 Resources for the lexicon are stored in a Google Drive; ask [Ben Dickie](mailto:ben.dickie@manchester.ac.uk) for access.
+
+## Syntax and commands used in CAPLEX
+
+### 1. Adding a new anchor
+
+Users can navigate to a particular point in the website if we create [HTML anchors](https://html.com/anchors-links/){target = "_blank"} which have their own URL. An anchor is added as such:
+`<a id="example"></a>`
+Text may be added between `<a></a>` which will be highlighted as blue and if `href=` is provided, clicking on this text will send the user to `href`. `href` can also contain `mailto:email.address@somewhere.com` to have the user [open someone's email address](mailto:email.address@somewhere.com). In CAPLEX we mainly use anchors to create points of reference.
+
+### 2. Creating a hyperlink
+
+If we wish to send the user somewhere, we can link parts of the website or add external links to text. This can be done by either using HTML anchors as discussed in 1. Adding a new anchor, or by using `[shown text](url)`. The `url` may be a reference within the webpage, for example if `url` is `#syntax-and-commands-used-in-caplex` then [shown text](#syntax-and-commands-used-in-caplex) will send you to the title of this section. If `url` is `quantities.md#S`(1), then [shown text](quantities.md#S){target = "_blank"} will send you to the Signal quantity in the Q - Quantities section. If `url` is `https://github.com/OSIPI/OSIPI_CAPLEX` the [new website](https://github.com/OSIPI/OSIPI_CAPLEX){target = "_blank"} will be opened. For references, please use the full doi address such as `https://doi.org/10.1007/b137553`
+{ .annotate }
+
+1.  The part after `#` is the `id` or `name` of the anchor element.
+
+??? note "Opening link in a new tab"
+
+    If you want to have the link be opened in a new tab:
+    === "Markdown"
+
+        Add `{target = "_blank"}` at the end of any link, for example `[shown text](quantities.md#S){target = "_blank"}`.
+    
+    === "HTML"
+
+        Add `target = "_blank"` and `rel = "noopener"` into your HTML anchor. For example </br>`<a href="../quantities/#S" target="_blank" rel="noopener">shown text</a>`. Note that the path here is different from Markdown version as we need to provide path to the linked anchor element from the currently open file. `../` lets us go up a level. Using the Markdown syntax is recommended.
+
+### 3. Making a new title
+
+Titles are prefixed by `#`. For example, the title of this point is `### 3. Making a new title`. The number of `#` determines the hierarchy of the titles. The more `#` the smaller and more nested the title becomes. For example, the title of this section is `## Syntax and commands used in CAPLEX` which creates a larger text. Titles can be [linked](#3-making-a-new-title)(1) by using the syntax `#3-making-a-new-title`, i.e. only using the alphanumeric symbols in the title and replacing spaces with dashes (alternatively use an anchor). If you are using VSCode, you can write `[link](#)` and right after writing `#` you should see a list of options for available links within the document. You can scroll through them using arrow keys and hitting `tab` will write down your selection. To use the same trick but link to a different webpage, write `[link](quantities.md#)` and the same list should be available for the chosen webpage.
+{ .annotate }
+
+1.  `[linked](#3-making-a-new-title)`
+
+### 4. Expanding or adding a table
+
+A table begins with a header section which looks like:
+
+```
+| Code | OSIPI name| Alternative names|Notation|Description|Reference|
+| -- | -- | -- | -- | -- | -- |
+```
+
+After that, the first row may be added by adding another line of `| -- | -- | -- | -- | -- | -- |` and replacing `--` with the appropriate data. A table with a single row of data looks like:
+
+```
+| Code | OSIPI name| Alternative names|Notation|Description|Reference|
+| -- | -- | -- | -- | -- | -- |
+| M.SM2.001 | <a id="LinModel_SM2"></a> Linear model | -- | Linear | This forward model is given by the following equation: </br> $S=k \cdot R_1$ </br> with </br> [*k* (Q.GE1.009)](quantities.md#const){:target="_blank"}, </br> [*R<sub>1</sub>* (Q.EL1.001)](quantities.md#R1){:target="_blank"},</br> [*S* (Q.MS1.001)](quantities.md#S){:target="_blank"}. | -- |
+```
+
+The data we add into the table must be part of a single line, therefore using `enter` key to create a new line would break the formatting of the table. Instead, use the HTML break symbol `<br>` to create a new line inside of a cell.(1)
+{ .annotate }
+
+1.  Consider using new lines to ensure equations are shown in their entirety.
+
+??? note "Adding math equations"
+
+    CAPLEX uses [MathJax](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference){:target="_blank"} to render equations. The syntax is [essentially the same as LaTex](https://docs.mathjax.org/en/v2.7-latest/tex.html){:target="_blank"} so try writing code you are familiar with and it will [likely work](https://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm){:target="_blank"}. The equation needs to be inside two `$`, for example `$\frac{x}{y}$` renders as $\frac{x}{y}$.
+
+### 5. Adding pretty objects
+
+CAPLEX uses [mkdocs-material](https://squidfunk.github.io/mkdocs-material/){target = "_blank"} to create the website. The tool comes with an extensive [reference page](https://squidfunk.github.io/mkdocs-material/reference/){target = "_blank"} on how to prettify the website. Many of these tools are used to create this tutorial website and examples of creating various objects may be seen by reading [contributionTutorial.md](https://github.com/OSIPI/OSIPI_CAPLEX/blob/main/docs/contributionTutorial.md?plain=1){target = "_blank"} file. Alternatively, you can ask questions on [github](https://github.com/OSIPI/OSIPI_CAPLEX/issues){target = "_blank"}.
+
+### 6. Adding abbreviations
+
+If you think the website's clarity could be improved by explaining what an abbreviation means, you can add it to `includes/abbreviations.md` following the syntax within (or remove what you think is excessive). The abbreviations module is clever enough that exaDCEmple will not be underlined but exa-DCE-mple will be.
