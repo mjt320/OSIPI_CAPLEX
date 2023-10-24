@@ -1,21 +1,13 @@
-
-<b><font color=#FF0000>This section is currently work in progress</font></b>
-
 <b><font color=#FF0000>If you follow this tutorial but find yourself stuck, please submit an issue in the <a id="tutorialIssue" href="https://github.com/OSIPI/OSIPI_CAPLEX/issues">github repository</a> and include all steps you have taken and the full traceback to the error you've encountered so we may improve this page.</font></b>
 
 This is a basic tutorial on how to contribute to the website if you've never used github, git or written any code for a website before.
 
-It is advised to use a context manager and an IDE (integrated development environment) to avoid many problems that arise when setting things up. I would recommend using [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html){target = "_blank"} which installs the `conda` context manager. Conda comes bundles with several IDEs, but for this tutorial we will use Visual Studio Code (VSCode). Use the link to install Anaconda, VSCode can be installed once we set up an environment.
+It is advised to use a context manager and an IDE (integrated development environment) to avoid many problems that arise when setting things up. I would recommend using [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html){target = "_blank"} which installs the `conda` context manager. Conda comes bundled with several IDEs, but for this tutorial we will use Visual Studio Code (VSCode). Use the link to install Anaconda, VSCode can be installed once we set up an environment.
 
 ## Set up conda environment
+
 Advantage of using conda environments is the ability to have multiple versions of 
 python and its packages (it's also easier to remedy mistakes if you break your python).
-
-TO DO: Recommend useful vscode extensions
-
-TO DO: Explain how to initialise a github repo
-
-TO DO: Explain commit, push and pull request and how to do each one of them.
 
 ### 1. Create a new conda environment
 
@@ -55,6 +47,14 @@ tutorial will use
 Verify the installation by running `conda list`. You should see an alphabetically 
 ordered list of packages including mkdocs-material.
 
+### 4. Install VSCode
+
+You can install VSCode either [using the official installer](https://code.visualstudio.com/docs/setup/setup-overview){target = "_blank"} or by using Anaconda Navigator which comes bundled with Anaconda. Open Anaconda Navigator and you should see something like this
+
+![anaconda navigator](tutorialImgs/anaconda navigator.png)
+
+In the upper middle part of the screen click on `base (root)` which shows you the available environments and click on CAPLEX. Find the icon for VSCode and install. Now you can launch VSCode either by using Anaconda Navigator, navigating to the same place (remember to change base environment to CAPLEX) or using Anaconda Prompt and running `conda activate CAPLEX` and then simply running `code`.
+
 ??? note "Connect base conda env to VSCode"
 
     When using conda make sure to ctrl+shift+P -> Python: Select Interpreter and choose
@@ -74,16 +74,9 @@ ordered list of packages including mkdocs-material.
 
     In this case you can simply delete the environment and remake it. Just don't delete (base) and don't change (base) unless you know what you're doing.
     Firstly deactivate the environment using `conda deactivate` so you're back to (base). Then run `conda remove -n ENV_NAME --all` replace ENV_NAME by CAPLEX or other name you chose.(1)
+    { .annotate }
 
     1.  If you were using this environment in VSCode, make sure to close VSCode before running the command otherwise there will be a leftover folder with a couple files.
-
-### 4. Install VSCode
-
-You can install VSCode either [using the official installer](https://code.visualstudio.com/docs/setup/setup-overview){target = "_blank"} or by using Anaconda Navigator which comes bundled with Anaconda. Open Anaconda Navigator and you should see something like this
-
-![anaconda navigator](tutorialImgs/anaconda navigator.png)
-
-In the upper middle part of the screen click on `base (root)` which shows you the available environments and click on CAPLEX. Find the icon for VSCode and install. Now you can launch VSCode either by using Anaconda Navigator, navigating to the same place (remember to change base environment to CAPLEX) or using Anaconda Prompt and running `conda activate CAPLEX` and then simply running `code`.
 
 ## Setting up GitHub
 
@@ -106,11 +99,23 @@ Copy the URL to your fork on github.(1) Open VSCode. On the welcome page find `C
 
 ![clone repo](tutorialImgs/clone repo.png)
 
-After confirming, you will be asked to choose a folder as the repository destination. This should ideally be an empty folder where the files from your fork will be replicated, allowing you to make local changes. When prompted by a popup, choose to open the repository folder. On the left side of your screen you should now see the folder/file structure of your fork.
+After confirming, you will be asked to choose a folder as the repository destination. This should ideally be an empty folder where the files from your fork will be replicated, allowing you to make local changes. When prompted by a popup, choose to open the repository folder. On the left side of your screen you should now see the folder/file structure of your fork. At this point you may also be asked to log in to your github account. This is advised so that your github account is linked to your VSCode. On the left panel click the third icon from top (named Source Control) and verify that you are no longer being asked to login.
 
-### 4. Add extensions
+### 4. First changes
 
-VSCode's power lies in the ability to add countless extensions to personalise your coding experience. I would recommend installing at least GitHub Actions
+Now you can open one of the files such as `contributionTutorial.md` and start making changes. Any change you make will either be highlighted in green when adding text or red whenever you remove text. If you have the Source Control selected, anytime you save your files git will scan your files and find any changes.
+
+![first changes](tutorialImgs/first changes.png)
+
+Once you're happy with your changes, click on the downward arrow `∨` symbol next to `Commit` and choose `Commit & Push`. Committing in this context means to update your local files with the changes you've made. You may commit as many times as you wish until you're happy with all the changes you've made. Pushing means updating the remote files on your fork with the changes you've made. Remember, there is one version of the files that exist on the GitHub servers and another on your local machine that was created when we _cloned_ the repository. Therefore we need to update the remote (on the GitHub server) version with our changes. When asked to stage all changes and commit press yes. Now a COMMIT_EDITMSG file will open.
+
+![commit message](tutorialImgs/commit message.png)
+
+Every commit must be accompanied by a message containing one line of comments. Not providing a comment is the same as cancelling the commit. Write your comment and save the file. On the upper right side find the tick `✓` symbol and click on it to complete your commit.
+
+Once you're happy with all of your changes, you need to create a pull request for your changes to be considered as part of the main repo. Go back to your fork on GitHub and you should see the option to `Compare & pull request`. Add comments explaining your proposed changes, scroll down to review your commits and click `Create pull request`. Once your pull request had been accepted, you may delete the fork both remotely and locally. Thank you for contributing!
+
+![first pull request](tutorialImgs/pull request.png)
 
 ## Work on a local version of the website
 
