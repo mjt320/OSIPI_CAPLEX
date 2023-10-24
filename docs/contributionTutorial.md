@@ -117,6 +117,10 @@ Once you're happy with all of your changes, you need to create a pull request fo
 
 ![first pull request](tutorialImgs/pull request.png)
 
+??? question "Oh no! I want to add one more change. What now?"
+
+    Don't worry, for as long as your pull request is pending, you can continue pushing commits and they will automatically become part of your pull request.
+
 ## Work on a local version of the website
 
 Build a local version of the site so you can see changes take place immediately. Use the `cd` command to guide your terminal into the folder containing the `mkdocs.yml` file. You can see the current path right next to `(CAPLEX)` in your terminal (1). Once you're done, run `mkdocs serve` which will build a local version of the website. At the bottom of your terminal the final line will contain the address 127.0.0.1:8000. Hold CTRL and click on it to open in your default browser (best to move it to second monitor with VSCode open on your primary monitor). Now whenever you save any file you've worked on, the local version of the website will automatically be rebuilt.
