@@ -95,21 +95,21 @@ This section contains general physical and mathematical quantities which are use
 
 | Code | OSIPI name | Alternative names|Notation|Description|OSIPI units|Reference|
 | -- | -- | -- | -- | -- | -- | -- |
-| Q.GE1.001 | <a name="DataGrid"></a> Data grid | -- | *[x<sub>1</sub>,...,x<sub>n</sub>]* | Sampling points of a data set (typically time or frequency). | variable | -- |
-| Q.GE1.002 | <a name="Data"></a> Data | -- | *[f<sub>1</sub>,...,f<sub>n</sub>]* | Values of a data set with respect to a data grid. The data set has the value *f<sub>i</sub>* at data grid point *x<sub>i</sub>*. | variable | -- |
-| Q.GE1.003 | <a name="index"></a> Index | -- | *i* | The number of the index of a data or data grid point. | -- | -- |
-| Q.GE1.004 | <a name="time"></a> Time | -- | *t* | Time | s | -- |
+| Q.GE1.001 | <a name="DataGrid"></a> Data grid | -- | $[x_1,...,x_n]$ | Sampling points of a data set (typically time or frequency). | variable | -- |
+| Q.GE1.002 | <a name="Data"></a> Data | -- | $[f_1,...,f_n]$ | Values of a data set with respect to a data grid. The data set has the value $f_i$ at data grid point $x_i$. | variable | -- |
+| Q.GE1.003 | <a name="index"></a> Index | -- | $i$ | The number of the index of a data or data grid point. | -- | -- |
+| Q.GE1.004 | <a name="time"></a> Time | -- | $t$ | Time | s | -- |
 | Q.GE1.005 | <a name="timeStep"></a> Time step | -- | $\Delta t$  | Time between two successive data points, e.g. two images (for fixed temporal resolution). | s | -- |
 | Q.GE1.006 | <a name="freq"></a> Frequency | -- | $\nu$ |Frequency | 1/s | -- |
-| Q.GE1.007 | <a name="Lax"></a> Axial length | -- | *L<sub>ax</sub>* | The axial length of a cylindrical object, e.g. a capillary. | $\mu m$ | -- |
-| Q.GE1.008 |<a name="xax"></a>  Axial position | -- | *x<sub>ax</sub>* | The spatial position within a cylindrical object, e.g. a capillary. In the case of a capillary x=0 denotes the arterial inlet position and x=L<sub>ax</sub> the venous outlet position. | $\mu m$ | -- |
-| Q.GE1.009 | <a name="const"></a> Constant value | -- | *k* | A constant value which can be used e.g. for scaling. | variable | -- |
-| Q.GE1.010 | <a name="L"></a> Lower threshold | -- | *L* | The lower value at which the behavior of a function or algorithm changes. | variable | -- |
-| Q.GE1.011 | <a name="U"></a> Upper threshold | -- | *U* | The upper value at which the behavior of a function or algorithm changes.   | variable | -- |
+| Q.GE1.007 | <a name="Lax"></a> Axial length | -- | $L_{ax}$ | The axial length of a cylindrical object, e.g. a capillary. | $\mu m$ | -- |
+| Q.GE1.008 |<a name="xax"></a>  Axial position | -- | $x_{ax}$ | The spatial position within a cylindrical object, e.g. a capillary. In the case of a capillary x=0 denotes the arterial inlet position and x=L<sub>ax</sub> the venous outlet position. | $\mu m$ | -- |
+| Q.GE1.009 | <a name="const"></a> Constant value | -- | $k$ | A constant value which can be used e.g. for scaling. | variable | -- |
+| Q.GE1.010 | <a name="L"></a> Lower threshold | -- | $L$ | The lower value at which the behavior of a function or algorithm changes. | variable | -- |
+| Q.GE1.011 | <a name="U"></a> Upper threshold | -- | $U$ | The upper value at which the behavior of a function or algorithm changes.   | variable | -- |
 | Q.GE1.012 | <a name="f(x)"></a> Dynamic function | -- | $f(x)$ | A function of an independent variable *x* (typically time or frequency) with value $f(x_i)$ at data grid point $x_i$. | variable | -- |
 | Q.GE1.013 | <a name="x_start"></a> Start of range | -- | $x_{start}$ | The start point of the range [$x_{start}$, $x_{end}$].  | variable | -- |
 | Q.GE1.014 | <a name="x_end"></a> End of range | -- | $x_{end}$  | The end point of the range [$x_{start}$, $x_{end}$]. | variable | -- |
-| Q.GE1.015 | <a name="sampleSize"></a> Sample size | -- | *n* | The number samples within a data set.| variable | -- |
+| Q.GE1.015 | <a name="sampleSize"></a> Sample size | -- | $n$ | The number samples within a data set.| variable | -- |
 | Q.GE1.999 | <a name="not listed GE1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
 
