@@ -204,7 +204,7 @@ CAPLEX uses [mkdocs-material](https://squidfunk.github.io/mkdocs-material/){targ
 
 ### 6. Adding abbreviations
 
-If you think the website's clarity could be improved by explaining what an abbreviation means, you can add it to `includes/abbreviations.md` following the syntax within (or remove what you think is excessive). The abbreviations module is clever enough that exaDCEmple will not be underlined but exa-DCE-mple will be.
+If you think the website's clarity could be improved by explaining what an abbreviation means, you can add it to [abbreviations.md](https://github.com/OSIPI/OSIPI_CAPLEX/blob/main/includes/abbreviations.md?plain=1){target = "_blank"} following the syntax within (or remove what you think is excessive). The abbreviations module is clever enough that exaDCEmple will not be underlined but exa-DCE-mple will be.
 
 ### 7. Adding an image
 
