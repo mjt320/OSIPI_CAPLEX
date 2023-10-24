@@ -5,6 +5,8 @@
 
 This is a basic tutorial on how to contribute to the website if you've never used github, git or written any code for a website before.
 
+My new addition!
+
 It is advised to use a context manager and an IDE (integrated development environment) to avoid many problems that arise when setting things up. I would recommend using [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html){target = "_blank"} which installs the `conda` context manager. Conda comes bundles with several IDEs, but for this tutorial we will use Visual Studio Code (VSCode). Use the link to install Anaconda, VSCode can be installed once we set up an environment.
 
 ## Set up conda environment
