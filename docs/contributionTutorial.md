@@ -99,7 +99,7 @@ Navigate to [OSIPI_CAPLEX GitHub](https://github.com/OSIPI/OSIPI_CAPLEX){target 
 
 ### 3. Clone your fork in VSCode
 
-Copy the URL to your fork on github.(1) Open VSCode. On the welcome page find `Clone Git Repository` and click on it. A small window will open at the top of the screen. Paste the fork URL here.
+Copy the URL to your fork on github.(1) Open VSCode. On the welcome page find `Clone Git Repository` and click on it. A small window will open at the top of the screen. Paste the fork URL here. 
 { .annotate }
 
 1.  For example `https://github.com/MartinKjunior/OSIPI_CAPLEX_MartinK`
