@@ -11,8 +11,6 @@ It is advised to use a context manager and an IDE (integrated development enviro
 Advantage of using conda environments is the ability to have multiple versions of 
 python and its packages (it's also easier to remedy mistakes if you break your python).
 
-TO DO: Rewrite this so anaconda prompt is used for installation of venv and vscode.
-
 TO DO: Recommend useful vscode extensions
 
 TO DO: Explain how to initialise a github repo
@@ -21,13 +19,20 @@ TO DO: Explain commit, push and pull request and how to do each one of them.
 
 ### 1. Create a new conda environment
 
+Once Anaconda has been installed, if you're on Windows press the Windows key and search for `Anaconda Prompt` or among applications there should be a `Anaconda3 (64-bit)` folder containing anaconda prompt. On MacOS you can simply use the `Terminal`. When opened, you should see the following
+
+![(anaconda prompt)](tutorialImgs/anaconda prompt.png)
+
 `conda create -n CAPLEX python`
 <br>This creates a new environment called 'CAPLEX' with the latest version of 
 python supported by your conda version. Once python has been configured you will
  be asked whether to proceed so just press enter. Wait for python to download 
-and install.
+and install. 
 
-    ![(new conda env)](tutorialImgs/new conda env.png)
+<figure markdown>
+  ![(new conda env)](tutorialImgs/new conda env.png)
+  <figcaption>Run the command above and after a while you should see a list of packages similar to this image. Either press enter or write <code>y</code> and then press enter.</figcaption>
+</figure>
 
 ### 2. Activate your new environment
 
@@ -41,8 +46,13 @@ use for installation **do not switch between them within one environment**. This
 may cause issues where your packages cannot find each other due to being on 
 different channels. So that you may install other packages with pip, this 
 tutorial will use
-<br>`pip install mkdocs-material`
-<br>Verify the installation by running `conda list`, you should see an alphabetically 
+
+`pip install mkdocs-material`(1)
+{ .annotate }
+
+1.  `conda install -c conda-forge mkdocs-material`
+
+Verify the installation by running `conda list`. You should see an alphabetically 
 ordered list of packages including mkdocs-material.
 
 ??? note "Connect base conda env to VSCode"
@@ -52,7 +62,7 @@ ordered list of packages including mkdocs-material.
     and if successful, it should begin with `(base)` 
     { .annotate }
 
-    1.  On the right side of your terminal window you should see ![(new terminal)](tutorialImgs/new terminal.png) <br>click on the `+` to open a new terminal.
+    1.  On the right side of your terminal window you should see ![(new terminal)](tutorialImgs/new terminal.png) <br>click on the `∨` and click on Command Prompt to open a new terminal.
 
     ![(base)](tutorialImgs/(base).png)
 
@@ -63,21 +73,61 @@ ordered list of packages including mkdocs-material.
 ??? question "What if I made a mistake and this environment is broken?"
 
     In this case you can simply delete the environment and remake it. Just don't delete (base) and don't change (base) unless you know what you're doing.
-    Firstly deactivate the environment using `conda deactivate` so you're back to (base). Then run `conda remove -n ENV_NAME --all` replace ENV_NAME by CAPLEX or other name you chose.
+    Firstly deactivate the environment using `conda deactivate` so you're back to (base). Then run `conda remove -n ENV_NAME --all` replace ENV_NAME by CAPLEX or other name you chose.(1)
+
+    1.  If you were using this environment in VSCode, make sure to close VSCode before running the command otherwise there will be a leftover folder with a couple files.
+
+### 4. Install VSCode
+
+You can install VSCode either [using the official installer](https://code.visualstudio.com/docs/setup/setup-overview){target = "_blank"} or by using Anaconda Navigator which comes bundled with Anaconda. Open Anaconda Navigator and you should see something like this
+
+![anaconda navigator](tutorialImgs/anaconda navigator.png)
+
+In the upper middle part of the screen click on `base (root)` which shows you the available environments and click on CAPLEX. Find the icon for VSCode and install. Now you can launch VSCode either by using Anaconda Navigator, navigating to the same place (remember to change base environment to CAPLEX) or using Anaconda Prompt and running `conda activate CAPLEX` and then simply running `code`.
+
+## Setting up GitHub
+
+[Set up a GitHub account.](https://docs.github.com/en/get-started/onboarding/getting-started-with-your-github-account){target = "_blank"}
+
+### 1. Learning basic git flow
+
+If you're brand new to git I highly recommend following this [tutorial](https://github.com/firstcontributions/first-contributions){target = "_blank"} on how to create your first pull request. A pull request is how you ask the maintainer of OSIPI_CAPLEX github to add your changes to the source code of the website.
+
+### 2. Fork the github repo
+
+Navigate to [OSIPI_CAPLEX GitHub](https://github.com/OSIPI/OSIPI_CAPLEX){target = "_blank"} (this link is always available in the top right corner of the website) and create a new fork in your account.
+
+### 3. Clone your fork in VSCode
+
+Copy the URL to your fork on github.(1) Open VSCode. On the welcome page find `Clone Git Repository` and click on it. A small window will open at the top of the screen. Paste the fork URL here.
+{ .annotate }
+
+1.  For example `https://github.com/MartinKjunior/OSIPI_CAPLEX_MartinK`
+
+![clone repo](tutorialImgs/clone repo.png)
+
+After confirming, you will be asked to choose a folder as the repository destination. This should ideally be an empty folder where the files from your fork will be replicated, allowing you to make local changes. When prompted by a popup, choose to open the repository folder. On the left side of your screen you should now see the folder/file structure of your fork.
+
+### 4. Add extensions
+
+VSCode's power lies in the ability to add countless extensions to personalise your coding experience. I would recommend installing at least GitHub Actions
 
 ## Work on a local version of the website
 
-Build a local version of the site so you can see changes take place immediately. Use the `cd` command to guide your terminal into the folder containing the `mkdocs.yml` file. You can see the current path right next to (CAPLEX) in your terminal (1). Once you're done, run `mkdocs serve` which will build a local version of the website. At the bottom on your terminal the final line will contain the address 127.0.0.1:8000. Hold CTRL and click on it to open in your default browser (best to move it to second monitor with VSCode open on your primary monitor). Now whenever you save any file you've worked on the local version of the website will automatically be rebuilt.
+Build a local version of the site so you can see changes take place immediately. Use the `cd` command to guide your terminal into the folder containing the `mkdocs.yml` file. You can see the current path right next to `(CAPLEX)` in your terminal (1). Once you're done, run `mkdocs serve` which will build a local version of the website. At the bottom of your terminal the final line will contain the address 127.0.0.1:8000. Hold CTRL and click on it to open in your default browser (best to move it to second monitor with VSCode open on your primary monitor). Now whenever you save any file you've worked on, the local version of the website will automatically be rebuilt.
 { .annotate }
 
 1.  When you write `cd .\` you can press **tab** to scroll through paths found in a particular   folder, saving you typing long folder names.
 
-![(mkdocs serve highlight)](tutorialImgs/mkdocs serve highlight.png)
+<figure markdown>
+  ![(mkdocs serve highlight)](tutorialImgs/mkdocs serve highlight.png)
+  <figcaption>The first line shows and example of a path to the folder containing the <code>mkdocs.yml</code> file. Note the <code>(CAPLEX)</code> at the beginning signifying we are in the new environment. In yellow is the address of the local website that opens our website.</figcaption>
+</figure>
 
 ## Where to find documentation
 
 This website is built using [mkdocs-material](https://squidfunk.github.io/mkdocs-material/){target = "_blank"}.<br>
-Equations are rendered using [MathJax version2.7.7](https://docs.mathjax.org/en/v2.7-latest/){target = "_blank"}.<br>
+Equations are rendered using [MathJax version 2.7.7](https://docs.mathjax.org/en/v2.7-latest/){target = "_blank"}.<br>
 Resources for the lexicon are stored in a Google Drive; ask [Ben Dickie](mailto:ben.dickie@manchester.ac.uk) for access.
 
 ## Syntax and commands used in CAPLEX
@@ -108,7 +158,7 @@ If we wish to send the user somewhere, we can link parts of the website or add e
 
 ### 3. Making a new title
 
-Titles are prefixed by `#`. For example, the title of this point is `### 3. Making a new title`. The number of `#` determines the hierarchy of the titles. The more `#` the smaller and more nested the title becomes. For example, the title of this section is `## Syntax and commands used in CAPLEX` which creates a larger text. Titles can be [linked](#3-making-a-new-title)(1) by using the syntax `#3-making-a-new-title`, i.e. only using the alphanumeric symbols in the title and replacing spaces with dashes (alternatively use an anchor). If you are using VSCode, you can write `[link](#)` and right after writing `#` you should see a list of options for available links within the document. You can scroll through them using arrow keys and hitting `tab` will write down your selection. To use the same trick but link to a different webpage, write `[link](quantities.md#)` and the same list should be available for the chosen webpage.
+Titles are prefixed by `#`. For example, the title of this point is `### 3. Making a new title`. The number of `#` determines the hierarchy of the titles. The more `#` the smaller and more nested the title becomes. For example, the title of this section is `## Syntax and commands used in CAPLEX` which creates a larger text. Titles can be [linked](#3-making-a-new-title)(1) by using the syntax `#3-making-a-new-title`, i.e. only using the alphanumeric symbols in the title and replacing spaces with dashes (alternatively use an anchor). If you are using VSCode, you can write `[link](#)` and right after writing `#` you should see a list of options for available links within the document. You can scroll through them using arrow keys and hitting `tab` will write down your selection. To use the same trick but link to a different webpage, write `[link](quantities.md#)` and the same list should be available for the chosen file.
 { .annotate }
 
 1.  `[linked](#3-making-a-new-title)`
@@ -141,8 +191,24 @@ The data we add into the table must be part of a single line, therefore using `e
 
 ### 5. Adding pretty objects
 
-CAPLEX uses [mkdocs-material](https://squidfunk.github.io/mkdocs-material/){target = "_blank"} to create the website. The tool comes with an extensive [reference page](https://squidfunk.github.io/mkdocs-material/reference/){target = "_blank"} on how to prettify the website. Many of these tools are used to create this tutorial website and examples of creating various objects may be seen by reading [contributionTutorial.md](https://github.com/OSIPI/OSIPI_CAPLEX/blob/main/docs/contributionTutorial.md?plain=1){target = "_blank"} file. Alternatively, you can ask questions on [github](https://github.com/OSIPI/OSIPI_CAPLEX/issues){target = "_blank"}.
+CAPLEX uses [mkdocs-material](https://squidfunk.github.io/mkdocs-material/){target = "_blank"} to create the website. The tool comes with an extensive [reference page](https://squidfunk.github.io/mkdocs-material/reference/){target = "_blank"} on how to prettify the website. Many of these tools are used to create this tutorial webpage and examples of creating various objects may be seen by reading [contributionTutorial.md](https://github.com/OSIPI/OSIPI_CAPLEX/blob/main/docs/contributionTutorial.md?plain=1){target = "_blank"} file. Alternatively, you can ask questions on [github](https://github.com/OSIPI/OSIPI_CAPLEX/issues){target = "_blank"}.
 
 ### 6. Adding abbreviations
 
 If you think the website's clarity could be improved by explaining what an abbreviation means, you can add it to `includes/abbreviations.md` following the syntax within (or remove what you think is excessive). The abbreviations module is clever enough that exaDCEmple will not be underlined but exa-DCE-mple will be.
+
+### 7. Adding an image
+
+Images are added using the syntax<br>
+`![Image name](Image url)`<br> 
+with an optional configuration inside `{}` at the end. For example, `![test](OSIPI_logo_only_square.png){ width="100" }` will create 
+
+![test](OSIPI_logo_only_square.png){ width="100" }
+
+![test](OSIPI_logo_only_square.png){ width="100" align=right }
+
+We can also align the image to the right using `{ align=right }`.
+
+Additionally, we can add `{ loading=lazy }` in case there are many images on the webpage and we want to only load those that are visible to the user to help performance.
+
+
