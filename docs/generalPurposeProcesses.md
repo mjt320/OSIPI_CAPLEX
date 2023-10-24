@@ -147,7 +147,7 @@ Uncertainty estimation and statistics processes
 
 | Code | OSIPI name| Alternative names|Notation|Description|Reference|
 | -- | -- | -- | -- | -- | -- |
-| G.AV1.001 | <a name=""></a> Calculate Average | -- | CalcAverage | This process returns the average of input data according to a specified averaging method. <br/> **Input:** <br /> [Data (Q.GE1.002)](quantities.md#Data){:target="_blank"}, Averaging method (select from [uncertainty estimation and statistics processes](#Uncertainty estimation and statistics processes) e.g. [Calc $\bar{x}$ (G.US1.001)](#CalcMeanSample) <br/> **Output:** <br /> [Data (Q.GE1.002)](quantities.md#Data){:target="_blank"}| -- |
+| G.AV1.001 | <a name=""></a> Calculate Average | -- | CalcAverage | This process returns the average of input data according to a specified averaging method. <br/> **Input:** <br /> [Data (Q.GE1.002)](quantities.md#Data){:target="_blank"}, Averaging method (select from [uncertainty estimation and statistics processes](#Uncertainty estimation and statistics processes)) e.g. [Calc $\bar{x}$ (G.US1.001)](#CalcMeanSample) <br/> **Output:** <br /> [Data (Q.GE1.002)](quantities.md#Data){:target="_blank"}| -- |
 | G.AV1.999 | <a name="not listed AV1"></a> Method not listed | -- | -- |This is a custom free-text item, which can be used if a method of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | -- |
 
 
