@@ -28,6 +28,8 @@ You can zoom into equations by double-clicking on them.
 
 If you wish to copy any equation to use elsewhere, right-click on the equation. A dropbox should appear where the first option is `Show Math As`. Hover over this option to open another dropbox. Click on `TeX Commands`. The code creating the equation opens in a new window. Select it with your mouse or press `CTRL + A` followed by `CTRL + C` to copy.
 
+![tex commands](tutorialImgs/tex commands.png)
+
 ## Navigating the site
 
 The left-hand vertical bar contains the high-level navigation table of the whole website. The right-hand vertical bar contains the Table of Contents of the currently open page. Clicking on them will send you to the chosen section.
