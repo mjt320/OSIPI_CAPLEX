@@ -9,8 +9,8 @@ copyright: >
 
 theme:
   name: material
-  logo: OSIPI_logo.png
-  favicon: OSIPI_logo_only_square.png
+  logo: osipiImgs/OSIPI_logo.png
+  favicon: osipiImgs/OSIPI_logo_only_square.png
   palette:
 
     # Palette toggle for light mode
