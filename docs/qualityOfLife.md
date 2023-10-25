@@ -32,6 +32,10 @@ If you wish to copy any equation to use elsewhere, right-click on the equation. 
 
 The left-hand vertical bar contains the high-level navigation table of the whole website. The right-hand vertical bar contains the Table of Contents of the currently open page. Clicking on them will send you to the chosen section.
 
+## Explaining abbreviations
+
+Some abbreviations are underlined, such as DCE. Hovering over them with your mouse will bring up a window showing what is abbreviated.
+
 ## Light/Dark Theme
 
 At the top of the webpage, next to the `Search` bar there is an icon allowing you to switch between light and dark mode. :material-weather-sunny: means you are in light mode, :material-weather-night: means you are in dark mode.
