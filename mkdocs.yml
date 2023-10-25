@@ -34,6 +34,7 @@ theme:
       question: fontawesome/solid/circle-question
       warning: fontawesome/solid/triangle-exclamation
     annotation: material/plus-circle
+    repo: fontawesome/brands/github
 
 docs_dir: docs
 
