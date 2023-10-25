@@ -8,6 +8,10 @@ This section will introduce you to some tools available on this website to make 
 
 Inside the data tables you can find a button saying `HYPERLINK`. Click on it and the reference to the data cell will be copied into your clipboard. You can use this reference in your publications.
 
+## Copying reference DOI
+
+You can right-click on any [link](#copying-reference-doi), such as a reference to a paper and one of the options is `Copy link address`. All references should be linked either via their DOI or PubMed repository of the paper. If this is not the case, please [report it](https://github.com/OSIPI/OSIPI_CAPLEX/issues){target="_blank"}.
+
 ## Search bar
 
 <b><font color=#FF0000>This feature is currently worked on. Your [feedback](https://forms.gle/dsfUEZx6P91rBwJe6){target="_blank"} would be greatly appreciated.</font></b>
