@@ -2,6 +2,8 @@
 
 This is a basic tutorial on how to contribute to the website if you've never used github, git or written any code for a website before.
 
+[Click here](#where-to-find-documentation) to skip the "setting up workspace" tutorial.
+
 It is advised to use a context manager and an IDE (integrated development environment) to avoid many problems that arise when setting things up. I would recommend using [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html){target = "_blank"} which installs the `conda` context manager. Conda comes bundled with several IDEs, but for this tutorial we will use Visual Studio Code (VSCode). Use the link to install Anaconda, VSCode can be installed once we set up an environment.
 
 ## Set up conda environment
@@ -59,7 +61,7 @@ In the upper middle part of the screen click on `base (root)` which shows you th
 
     When using conda make sure to ctrl+shift+P -> Python: Select Interpreter and choose
     whichever environment has the webdev packages installed. Then open a new terminal (1)
-    and if successful, it should begin with `(base)` 
+    and if successful, it should begin with `(base)` or whatever name you chose for your environment.
     { .annotate }
 
     1.  On the right side of your terminal window you should see ![(new terminal)](tutorialImgs/new terminal.png) <br>click on the `∨` and click on Command Prompt to open a new terminal.
@@ -126,7 +128,7 @@ Once you're happy with all of your changes, you need to create a pull request fo
 Build a local version of the site so you can see changes take place immediately. Use the `cd` command to guide your terminal into the folder containing the `mkdocs.yml` file. You can see the current path right next to `(CAPLEX)` in your terminal (1). Once you're done, run `mkdocs serve` which will build a local version of the website. At the bottom of your terminal the final line will contain the address 127.0.0.1:8000. Hold CTRL and click on it to open in your default browser (best to move it to second monitor with VSCode open on your primary monitor). Now whenever you save any file you've worked on, the local version of the website will automatically be rebuilt.
 { .annotate }
 
-1.  When you write `cd .\` you can press **tab** to scroll through paths found in a particular   folder, saving you typing long folder names.
+1.  When you write `cd .\` you can press **tab** to scroll through paths found in a particular folder, saving you typing long folder names. Once you **tab** to the folder you want, write another `\` and you can continue tabbing through the available subfolders.
 
 <figure markdown>
   ![(mkdocs serve highlight)](tutorialImgs/mkdocs serve highlight.png)
@@ -164,7 +166,7 @@ Text may be added between `<a></a>` which will be highlighted as blue and if `hr
 
 ### 2. Creating a hyperlink
 
-If we wish to send the user somewhere, we can link parts of the website or add external links to text. This can be done by either using HTML anchors as discussed in 1. Adding a new anchor, or by using `[shown text](url)`. The `url` may be a reference within the webpage, for example if `url` is `#syntax-and-commands-used-in-caplex` then [shown text](#syntax-and-commands-used-in-caplex) will send you to the title of this section. If `url` is `quantities.md#S`(1), then [shown text](quantities.md#S){target = "_blank"} will send you to the Signal quantity in the Q - Quantities section. If `url` is `https://github.com/OSIPI/OSIPI_CAPLEX` then [new website](https://github.com/OSIPI/OSIPI_CAPLEX){target = "_blank"} will be opened. For references, please use the full doi address such as `https://doi.org/10.1007/b137553`.
+If we wish to send the user somewhere, we can link parts of the website or add external links to text. This can be done by either using HTML anchors as discussed in `1. Adding a new anchor`, or by using `[shown text](url)`. The `url` may be a reference within the webpage, for example if `url` is `#syntax-and-commands-used-in-caplex` then [shown text](#syntax-and-commands-used-in-caplex) will send you to the title of this section. If `url` is `quantities.md#S`(1), then [shown text](quantities.md#S){target = "_blank"} will send you to the Signal quantity in the Q - Quantities section. If `url` is `https://github.com/OSIPI/OSIPI_CAPLEX` then [new website](https://github.com/OSIPI/OSIPI_CAPLEX){target = "_blank"} will be opened. For references, please use the full doi address such as `https://doi.org/10.1007/b137553`.
 { .annotate }
 
 1.  The part after `#` is the `id` or `name` of the anchor element.
@@ -182,10 +184,11 @@ If we wish to send the user somewhere, we can link parts of the website or add e
 
 ### 3. Making a new title
 
-Titles are prefixed by `#`. For example, the title of this point is `### 3. Making a new title`. The number of `#` determines the hierarchy of the titles. The more `#` the smaller and more nested the title becomes. For example, the title of this section is `## Syntax and commands used in CAPLEX` which creates a larger text. Titles can be [linked](#3-making-a-new-title)(1) by using the syntax `#3-making-a-new-title`, i.e. only using the alphanumeric symbols in the title and replacing spaces with dashes (alternatively use an anchor). If you are using VSCode, you can write `[link](#)` and right after writing `#` you should see a list of options for available links within the document. You can scroll through them using arrow keys and hitting `tab` will write down your selection. To use the same trick but link to a different webpage, write `[link](quantities.md#)` and the same list should be available for the chosen file.
+Titles are prefixed by `#`. For example, the title of this point is `### 3. Making a new title`. The number of `#` determines the hierarchy of the titles. The more `#` the smaller and more nested the title becomes. For example, the title of this section is `## Syntax and commands used in CAPLEX` which creates a larger text. Titles can be [linked](#3-making-a-new-title)(1) by using the syntax `#3-making-a-new-title`, i.e. only using the alphanumeric symbols in the title and replacing spaces with dashes (alternatively use an anchor).(2)
 { .annotate }
 
 1.  `[linked](#3-making-a-new-title)`
+2.  If you are using VSCode, you can write `[link](#)` and right after writing `#` you should see a list of options for available links within the document. You can scroll through them using arrow keys and hitting `tab` will write down your selection. To use the same trick but link to a different webpage, write `[link](quantities.md#)` and the same list should be available for the chosen file.
 
 ### 4. Expanding or adding a table
 
@@ -213,9 +216,9 @@ The data we add into the table must be part of a single line, therefore using `e
 
     CAPLEX uses [MathJax](https://math.meta.stackexchange.com/questions/5020/mathjax-basic-tutorial-and-quick-reference){:target="_blank"} to render equations. The syntax is [essentially the same as LaTex](https://docs.mathjax.org/en/v2.7-latest/tex.html){:target="_blank"} so try writing code you are familiar with and it will [likely work](https://www.onemathematicalcat.org/MathJaxDocumentation/TeXSyntax.htm){:target="_blank"}. The equation needs to be inside two `$`, for example `$\frac{x}{y}$` renders as $\frac{x}{y}$.
 
-### 5. Adding pretty objects
+### 5. Adding pretty objects (notes, tabs, annotations, lists...)
 
-CAPLEX uses [mkdocs-material](https://squidfunk.github.io/mkdocs-material/){target = "_blank"} to create the website. The tool comes with an extensive [reference page](https://squidfunk.github.io/mkdocs-material/reference/){target = "_blank"} on how to prettify the website. Many of these tools are used to create this tutorial webpage and examples of creating various objects may be seen by reading [contributionTutorial.md](https://github.com/OSIPI/OSIPI_CAPLEX/blob/main/docs/contributionTutorial.md?plain=1){target = "_blank"} file. Alternatively, you can ask questions on [github](https://github.com/OSIPI/OSIPI_CAPLEX/issues){target = "_blank"}.
+CAPLEX uses [mkdocs-material](https://squidfunk.github.io/mkdocs-material/){target = "_blank"} to create the website. The tool comes with an extensive [reference page](https://squidfunk.github.io/mkdocs-material/reference/){target = "_blank"} on how to prettify the website. Many of these tools are used to create this tutorial webpage and examples of creating various objects may be seen by reading [contributionTutorial.md](https://github.com/OSIPI/OSIPI_CAPLEX/blob/main/docs/contributionTutorial.md?plain=1){target = "_blank"} file. Alternatively, you can ask for help on [github](https://github.com/OSIPI/OSIPI_CAPLEX/issues){target = "_blank"}.
 
 ### 6. Adding abbreviations
 
@@ -224,8 +227,13 @@ If you think the website's clarity could be improved by explaining what an abbre
 ### 7. Adding an image
 
 Images are added using the syntax<br>
+
 `![Image name](Image url)`<br> 
-with an optional configuration inside `{}` at the end. For example, `![test](OSIPI_logo_only_square.png){ width="100" }` will create 
+
+with an optional configuration inside `{}`(1) at the end. For example, `![test](OSIPI_logo_only_square.png){ width="100" }` will create
+{ .annotate }
+
+1.  Multiple configurations should all be included within a single `{}` with spaces between, e.g. `{ width="100" align=right }`.
 
 ![test](OSIPI_logo_only_square.png){ width="100" }
 
@@ -248,9 +256,9 @@ To enhance user experience, we provide a button to copy the URL as a reference t
 
 - `HYPERLINK`: this is the text visible on the button.
 
-For example, let's say I have an anchor that looks like<br>
+For example, let's say we have an anchor that looks like<br>
 `<a id="GRE model" href="#GRE model"></a>`<br>
-Here for my button to work, my `ID` becomes `'GRE model'`(1) and inside the anchor I provide the reference to this anchor using `href="#GRE model"` which is then accessed by the button.
+Here for the button to work, the `ID` becomes `'GRE model'`(1) and inside the anchor we provide the reference to this anchor using `href="#GRE model"` which is then accessed by the button.
 { .annotate }
 
 1.  Please note that because `onclick=` accepts a string as a parameter, the `ID` uses `''` instead of `""` to signify a string input for `.getElementById(ID)`.
