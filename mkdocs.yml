@@ -32,7 +32,6 @@ theme:
       note: fontawesome/solid/note-sticky
       question: fontawesome/solid/circle-question
       warning: fontawesome/solid/triangle-exclamation
-    # Throws an error in the editor but works just fine so ¯\_(ツ)_/¯
     annotation: material/plus-circle
 
 docs_dir: docs

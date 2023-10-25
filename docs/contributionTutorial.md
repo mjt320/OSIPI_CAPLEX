@@ -139,6 +139,21 @@ This website is built using [mkdocs-material](https://squidfunk.github.io/mkdocs
 Equations are rendered using [MathJax version 2.7.7](https://docs.mathjax.org/en/v2.7-latest/){target = "_blank"}.<br>
 Resources for the lexicon are stored in a Google Drive; ask [Ben Dickie](mailto:ben.dickie@manchester.ac.uk) for access.
 
+## Basic mkdocs website structure
+
+The core file that builds the website is `mkdocs.yml`. It defines the authorship of the website, the theme, the structure and every plugin, extension and additional css/js code that is run.
+
+The `MathJax` extension properties are defined under `extra_javascript`(1) and can be further customised by `javascripts/mathjax.js`.
+{ .annotate }
+
+1.  Version of MathJax is controlled with the link `https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML` which currently is set to be the 2.7.7 version. For more info [click here](https://docs.mathjax.org/en/latest/web/start.html){target = "_blank"}.
+
+Properties of existing objects can be modified using the `stylesheets/extra.css` file. For example, this is how we control the width of the tables shown so they use the full space provided by your monitor.
+
+Additional functionality can be added using javascript in `javascripts/extra.js`. For example, this is how we added a function that allows the user to copy text into their clipboard.
+
+Abbreviations are added using `../includes/abbreviations.md`. This file needs to be kept outside of the `docs` folder.
+
 ## Syntax and commands used in CAPLEX
 
 ### 1. Adding a new anchor
@@ -220,4 +235,22 @@ We can also align the image to the right using `{ align=right }`.
 
 Additionally, we can add `{ loading=lazy }` in case there are many images on the webpage and we want to only load those that are visible to the user to help performance.
 
+### 8. Adding a button for hyperlink
 
+To enhance user experience, we provide a button to copy the URL as a reference to a particular quantity, model or process. An example of adding such button would be<br>
+`<button class="md-button" onclick="copyToClip(document.getElementById('GRE model').href)">HYPERLINK</button>`
+
+- `class="md-button"`: adds the default button properties to our button, making it visible and usable.
+
+- `onclick=`: defines the commands being run when the button is clicked
+
+- `document.getElementById(ID).href`: `document` is a reference to the current webpage. `.getElementById` uses the `id=` property of your HTML elements to find the one you're after. `ID` is the `id=` provided in an anchor. `.href` pulls out the data associated with the `href=` property, which is usually a link.
+
+- `HYPERLINK`: this is the text visible on the button.
+
+For example, let's say I have an anchor that looks like<br>
+`<a id="GRE model" href="#GRE model"></a>`<br>
+Here for my button to work, my `ID` becomes `'GRE model'`(1) and inside the anchor I provide the reference to this anchor using `href="#GRE model"` which is then accessed by the button.
+{ .annotate }
+
+1.  Please note that because `onclick=` accepts a string as a parameter, the `ID` uses `''` instead of `""` to signify a string input for `.getElementById(ID)`.
