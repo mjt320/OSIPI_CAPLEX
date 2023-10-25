@@ -49,7 +49,7 @@ nav:
     - G - General purpose processes: generalPurposeProcesses.md
     - D - Derived processes: derivedProcesses.md
     
-  - DCE\DSC resources: 
+  - DCE/DSC resources: 
     - DCE literature library: dceliterature.md
 plugins:
   - search:
