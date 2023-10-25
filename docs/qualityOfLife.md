@@ -28,6 +28,10 @@ At the top of the webpage, you may find the `Search` bar allowing you to find re
 
 You can zoom into equations by double-clicking on them.
 
+!!! warning
+    
+    Zooming into the page using `CTRL + +` may cause tables to be partially obstructed by the Table of Contents.
+
 ## Copying equation's TeX code.
 
 If you wish to copy any equation to use elsewhere, right-click on the equation. A dropbox should appear where the first option is `Show Math As`. Hover over this option to open another dropbox. Click on `TeX Commands`. The code creating the equation opens in a new window. Select it with your mouse or press `CTRL + A` followed by `CTRL + C` to copy.
