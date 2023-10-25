@@ -105,6 +105,10 @@ After confirming, you will be asked to choose a folder as the repository destina
 
 ### 4. First changes
 
+!!! warning
+
+    Changes should only be made to either `main-major-development` or `main-minor-development` branches. These changes will be merged into `main` by the repo maintainers after review. You can see the name of the branch you're currently on in the bottom left corner (e.g. `main`). To switch branch, click on it and a dropbox will open in the upper middle part of your screen. Click on the branch you wish to commit to.
+
 Now you can open one of the files such as `contributionTutorial.md` and start making changes. Any change you make will either be highlighted in green when adding text or red whenever you remove text. If you have the Source Control selected, anytime you save your files git will scan your files and find any changes.
 
 ![first changes](tutorialImgs/first changes.png)
