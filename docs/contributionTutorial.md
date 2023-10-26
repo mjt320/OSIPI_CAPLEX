@@ -4,7 +4,19 @@ This is a basic tutorial on how to contribute to the website if you've never use
 
 [Click here](#where-to-find-documentation) to skip the "setting up workspace" tutorial.
 
+## Install Anaconda
+
 It is advised to use a context manager and an IDE (integrated development environment) to avoid many problems that arise when setting things up. I would recommend using [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html){target = "_blank"} which installs the `conda` context manager. Conda comes bundled with several IDEs, but for this tutorial we will use Visual Studio Code (VSCode). Use the link to install Anaconda, VSCode can be installed once we set up an environment.
+
+### Installing `conda` via `winget` for Windows
+
+It is possible to install Git, VSCode and [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/){target = "_blank"} (lite version of Anaconda that only contains `conda`, Python and few basic packages) using `winget` on Windows if you're looking for a quick setup. Run the following commands:
+```
+winget install -e --id Git.Git
+winget install -e --id Anaconda.Miniconda3
+winget install -e --id Microsoft.VisualStudioCode
+```
+then continue with the tutorial, except you do not need to install VSCode anymore.
 
 ## Set up conda environment
 
@@ -112,6 +124,15 @@ After confirming, you will be asked to choose a folder as the repository destina
 Now you can open one of the files such as `contributionTutorial.md` and start making changes. Any change you make will either be highlighted in green when adding text or red whenever you remove text. If you have the Source Control selected, anytime you save your files git will scan your files and find any changes.
 
 ![first changes](tutorialImgs/first changes.png)
+
+In order to upload your changes you need to configure your git so that your changes may be attributed to you. If you've installed Git for Windows, you can run
+```
+git config --global user.name "YOUR NAME"
+git config --global user.email "YOUR EMAIL"
+```
+in the command prompt, substituting `YOUR NAME` and `YOUR EMAIL` with appropriate text. You can also open a git bash terminal in VSCode and run these command there. To do so, first make sure you have the terminal open. Then navigate to the right side of the terminal window where you can find `+ ∨` symbols. Click on the downward arrow and choose `Git Bash`. Run the commands above in the new window.
+
+![git bash](tutorialImgs/git bash.png)
 
 Once you're happy with your changes, click on the downward arrow `∨` symbol next to `Commit` and choose `Commit & Push`. Committing in this context means to update your local files with the changes you've made. You may commit as many times as you wish until you're happy with all the changes you've made. Pushing means updating the remote files on your fork with the changes you've made. Remember, there is one version of the files that exist on the GitHub servers and another on your local machine that was created when we _cloned_ the repository. Therefore we need to update the remote (on the GitHub server) version with our changes. When asked to stage all changes and commit press yes. Now a COMMIT_EDITMSG file will open.
 
