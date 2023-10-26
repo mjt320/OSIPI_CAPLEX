@@ -4,6 +4,12 @@ This is a basic tutorial on how to contribute to the website if you've never use
 
 [Click here](#where-to-find-documentation) to skip the "setting up workspace" tutorial.
 
+## Create a new development container
+
+<b><font color=#FF0000>We are currently setting up the devcontainer and writing a guide on how to use it. For now, please follow the rest of the guide to set up your development environment locally.</font></b>
+
+A [dev container](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers){target = "_blank"} is a [Docker](https://www.docker.com/){target = "_blank"} container specifically configured by us to provide you with a development environment where you can make the changes you want without having to install/setup anything locally. Simply start up a new dev container, wait for it to be built and code away!
+
 ## Install Anaconda
 
 It is advised to use a context manager and an IDE (integrated development environment) to avoid many problems that arise when setting things up. I would recommend using [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html){target = "_blank"} which installs the `conda` context manager. Conda comes bundled with several IDEs, but for this tutorial we will use Visual Studio Code (VSCode). Use the link to install Anaconda, VSCode can be installed once we set up an environment.
@@ -121,9 +127,13 @@ After confirming, you will be asked to choose a folder as the repository destina
 
     Changes should only be made to either `main-major-development` or `main-minor-development` branches. These changes will be merged into `main` by the repo maintainers after review. You can see the name of the branch you're currently on in the bottom left corner (e.g. `main`). To switch branch, click on it and a dropbox will open in the upper middle part of your screen. Click on the branch you wish to commit to.
 
+#### 4.1 Make a change
+
 Now you can open one of the files such as `contributionTutorial.md` and start making changes. Any change you make will either be highlighted in green when adding text or red whenever you remove text. If you have the Source Control selected, anytime you save your files git will scan your files and find any changes.
 
 ![first changes](tutorialImgs/first changes.png)
+
+#### 4.2 Configure Git
 
 In order to upload your changes you need to configure your git so that your changes may be attributed to you. If you've installed Git for Windows, you can run
 ```
@@ -134,11 +144,15 @@ in the command prompt, substituting `YOUR NAME` and `YOUR EMAIL` with appropriat
 
 ![git bash](tutorialImgs/git bash.png)
 
+#### 4.3 Commit & Push the change
+
 Once you're happy with your changes, click on the downward arrow `∨` symbol next to `Commit` and choose `Commit & Push`. Committing in this context means to update your local files with the changes you've made. You may commit as many times as you wish until you're happy with all the changes you've made. Pushing means updating the remote files on your fork with the changes you've made. Remember, there is one version of the files that exist on the GitHub servers and another on your local machine that was created when we _cloned_ the repository. Therefore we need to update the remote (on the GitHub server) version with our changes. When asked to stage all changes and commit press yes. Now a COMMIT_EDITMSG file will open.
 
 ![commit message](tutorialImgs/commit message.png)
 
-Every commit must be accompanied by a message containing one line of comments. Not providing a comment is the same as cancelling the commit. Write your comment and save the file. On the upper right side find the tick `✓` symbol and click on it to complete your commit.
+Every commit must be accompanied by a message containing one line of comments. **Not providing a comment is the same as cancelling the commit.** Write your comment and save the file. On the upper right side find the tick `✓` symbol and click on it to complete your commit.
+
+#### 4.4 Create a Pull Request
 
 Once you're happy with all of your changes, you need to create a pull request for your changes to be considered as part of the main repo. Go back to your fork on GitHub and you should see the option to `Compare & pull request`. Add comments explaining your proposed changes, scroll down to review your commits and click `Create pull request`. Once your pull request had been accepted, you may delete the fork both remotely and locally. Thank you for contributing!
 
