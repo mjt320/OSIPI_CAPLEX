@@ -269,7 +269,7 @@ Images are added using the syntax<br>
 
 `![Image name](Image url)`<br> 
 
-with an optional configuration inside `{}`(1) at the end. For example, `![test](osipiImgs/OSIPI_logo_only_square.png){ width="100" }` will create
+with an optional configuration inside `{}`(1) at the end. For example, <br>`![test](osipiImgs/OSIPI_logo_only_square.png){ width="100" }` will create
 { .annotate }
 
 1.  Multiple configurations should all be included within a single `{}` with spaces between, e.g. `{ width="100" align=right }`.

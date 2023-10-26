@@ -36,7 +36,7 @@ The items in this group are related to electromagnetic tissue properties and ele
 | Q.EL1.009.[j] | <a name="DeltaR2Star"></a> Change in transverse relaxation rate (GE) | -- | $\Delta R_{2,j}^*$ | Change in effective transverse relaxation rate (observed using a GE) with respect to $R_{20}^*$ in compartment *j*.| 1/s | -- |
 | Q.EL1.010 | <a name="R2ref"></a> Change in a reference transverse relaxation rate  | -- | $\overline{\Delta R}_{2,ref}^*$ | Average change in effective transverse relaxation rate in a reference area with no indicator extravasation. | 1/s | -- |
 | Q.EL1.011.[j] | <a name="Chi"></a> Molar magnetic susceptibility | -- | $\chi_j$ | Molar magnetic susceptibility in compartment *j*. | mL/mol | -- |
-| Q.EL1.012.[j] | <a name="Chi0"></a> Native molar magnetic susceptibility | Baseline *&#967 | $\chi_{0,j}$ | Pre-contrast molar magnetic susceptibility in compartment *j*. | mL/mol | -- |
+| Q.EL1.012.[j] | <a name="Chi0"></a> Native molar magnetic susceptibility | Baseline $\chi$ | $\chi_{0,j}$ | Pre-contrast molar magnetic susceptibility in compartment *j*. | mL/mol | -- |
 | Q.EL1.013.[j] |  <a name="DeltaChi"></a> Change in molar magnetic susceptibility | -- | $\Delta \chi_j$ | Change in molar magnetic susceptibility with respect to $\chi_{0}$ in compartment *j*.  | mL/mol | -- |
 | Q.EL1.014.[j] | <a name="DelChi"></a>  Molar magnetic susceptibility change per unit concentration of indicator | -- | $\delta \chi_j$ | Molar magnetic susceptibility change per unit concentration of indicator in compartment *j*. | mL/mol/mM| -- |
 | Q.EL1.015.[j] | <a name="r1"></a> Longitudinal relaxivity | *r<sub>1</sub>* -relaxivity | *r<sub>1,j</sub>* | Longitudinal relaxivity in compartment *j*. | 1/s/mM | -- |
@@ -132,7 +132,7 @@ To keep the inputs of these processes flexible, they are all defined for general
 | Q.CD1.010 | <a name="TTP"></a> Time to peak | -- | *TTP* | The time between the bolus arrival time (BAT) and the maximum time point *x<sub>max</sub>*: $TTP = x_{max} - BAT$ <br/>(Remark: this is expressed for time rather than a general data grid, because TTP is an often used parameter in perfusion analysis). | variable | -- |
 | Q.CD1.011 | <a name="WIS"></a> Wash-in-slope | -- | *WIS* | The ratio of the difference of the maximum data value $f_{max}$ and the baseline value $f_{BL}$ and the time to peak: $WIS = \frac{f_{max}-f_{BL}}{TTP}$  | $\frac{variable_{1}}{variable_{2}}$ | -- |
 | Q.CD1.012 | <a name="WOS"></a> Wash-out-slope | -- | *WOS* | The ratio of the difference of the maximum data value $f_{max}$ and the data value at the last data grid point $f_{fin}$ and difference between the last time point and the time at which the maximum occurs: $WOS = \frac{f_{max}-f_{fin}}{x_{max}-x_{fin}}$ | $\frac{variable_{1}}{variable_{2}}$ | -- |
-| Q.CD1.013 | <a name="AUC"></a> Area under curve | --| *AUC<sub>x<sub>start</sub>,x<sub>end</sub></sub>* | The integral value of a given dynamic function _f_ (or the numeric approximation for discrete data $[f_{1}, ...f_{n}]$ ) between the data grid points $x_{1}$ and $x_{2}$.  | $variable_{1} * variable_{2}$ | --|
+| Q.CD1.013 | <a name="AUC"></a> Area under curve | --| $AUC_{x_{start}, x_{end}}$ | The integral value of a given dynamic function _f_ (or the numeric approximation for discrete data $[f_{1}, ...f_{n}]$ ) between the data grid points $x_{1}$ and $x_{2}$.  | $variable_{1} * variable_{2}$ | --|
 | Q.DC1.999 | <a name="not listed DC1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
 
@@ -244,11 +244,11 @@ In this group, quantities related to optimization methods are listed. In this ve
 | Q.OP1.007 | <a name="MP_L"></a> Model parameter lower bounds | -- | $\phi_{LB}$ | Vector of the lower bounds for the search for the model parameters. | [variable units] | -- |
 | Q.OP1.008 | <a name="MP_U"></a> Model parameter upper bounds | -- | $\phi_{UB}$ | Vector of the upper bounds for the search for the model parameters. | [variable units]  | -- |
 | Q.OP1.009 | <a name="Weights"></a> Data weights | -- | $\omega$ | Vector of weights on the measured values during the optimization process. | -- | -- |
-| Q.OP1.010 | <a name="N_iter_max"></a> Maximum number of iterations | -- | $N_{it, max}$ | Largest number of steps taken in an iterative optimization. | - | -- |
+| Q.OP1.010 | <a name="N_iter_max"></a> Maximum <br>number of iterations | -- | $N_{it, max}$ | Largest number of steps taken in an iterative optimization. | - | -- |
 | Q.OP1.011 | <a name="ConvThresh"></a> Convergence threshold | -- | *e* | Convergence threshold on the optimizer. | -- | -- |
 | Q.OP1.012 | <a name="A"></a> Linear coefficients matrix | -- |*A* | A matrix with elements A<sub>ij</sub> with which a function linear in the model parameters  can be  expressed as $f(\phi;x_i)= \sum_{j=1}^{m}A_{ij}\phi_j$. <br />The $A_{ij}$ contain the data grid and the static model parameters.| -- | -- |
 | Q.OP1.013 | <a name="Lambda"></a> Regularization parameter | -- | $\lambda$ | A parameter which determines the weight of the regularization in an optimization.  | -- | -- |
-| Q.OP1.014 | <a name="Lambda_norm"></a> Normalized regularization parameter | -- | $\hat{\lambda}$ | The regularization parameter is expressed relative to the largest singular value &#963<sub>1</sub> of a SVD: $\hat{\lambda}=\frac{\lambda}{\sigma_1}$ .| -- | -- |
+| Q.OP1.014 | <a name="Lambda_norm"></a> Normalized regularization parameter | -- | $\hat{\lambda}$ | The regularization parameter is expressed relative to the largest singular value $\sigma_1$ of a SVD: $\hat{\lambda}=\frac{\lambda}{\sigma_1}$ .| -- | -- |
 | Q.OP1.015 | <a name="Lambda_fixed"></a> Fixed $\lambda$ value | -- | $\lambda_{fixed}$ | A fixed value, e.g. a literature value, assumed as regularization parameter. | -- | -- |
 | Q.OP1.999 | <a name="not listed OP1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
