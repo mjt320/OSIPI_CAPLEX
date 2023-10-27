@@ -16,7 +16,7 @@ If you're not familiar with Git, skip to parts 1 and 4 in [Setting up GitHub](#s
 
 !!! warning
 
-    Once you're done using the codespace, please make sure to either stop or delete it. This is done by clicking on `<> Code` again, clicking on three dots next to your codespace and choosing the appropriate action.
+    Once you're done using the codespace, please make sure to either stop or delete it. This is done by clicking on `<> Code` again, clicking on three dots next to your codespace and choosing the appropriate action. If GitHub is stuck on finding your codespace, refresh the page and try again.
 
 ## Install Anaconda
 
