@@ -2,9 +2,7 @@
     "image": "mcr.microsoft.com/devcontainers/universal:2",
     "features": {
       "ghcr.io/devcontainers-contrib/features/mkdocs:2": {
-        "plugins": [
-            "mkdocs-material pymdown-extensions"
-        ]
+        "plugins": "mkdocs-material pymdown-extensions"
       }
     }
   }
