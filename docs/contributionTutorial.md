@@ -4,11 +4,15 @@ This is a basic tutorial on how to contribute to the website if you've never use
 
 [Click here](#where-to-find-documentation) to skip the "setting up workspace" tutorial.
 
-## Create a new development container
-
-<b><font color=#FF0000>We are currently setting up the devcontainer and writing a guide on how to use it. For now, please follow the rest of the guide to set up your development environment locally.</font></b>
+## Work in a new development container
 
 A [dev container](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers){target = "_blank"} is a [Docker](https://www.docker.com/){target = "_blank"} container specifically configured by us to provide you with a development environment where you can make the changes you want without having to install/setup anything locally. Simply start up a new dev container, wait for it to be built and code away!
+
+To create a new codespace (which contains the devcontainer), navigate to a [GitHub branch](https://github.com/OSIPI/OSIPI_CAPLEX/tree/main-major-development){target = "_blank"} that contains a `devcontainer.json` file. On the upper right side of the page find a green `<> Code` button, click it, click on `Codespaces` (instead of `Local`) and `Create a new codespace`. Wait for the codespace to be built and start coding.
+
+![codespace gif](tutorialImgs/codespace gif.gif)
+
+If you're not familiar with Git, skip to parts 1 and 4 in [Setting up GitHub](#setting-up-github). In the section [Work on a local version of the website](#work-on-a-local-version-of-the-website) you don't need to use `cd`, simply write `mkdocs serve` in the terminal that opens at the bottom of your screen and the website will be built for you. If you wish to add files, such as images or gifs, from your machine to a folder in the devcontainer, simply drag the file over to the folder in the `Explorer` on the left-hand side of your screen and the file will be copied over.
 
 ## Install Anaconda
 
