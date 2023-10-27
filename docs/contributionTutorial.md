@@ -8,7 +8,7 @@ This is a basic tutorial on how to contribute to the website if you've never use
 
 A [dev container](https://docs.github.com/en/codespaces/setting-up-your-project-for-codespaces/adding-a-dev-container-configuration/introduction-to-dev-containers){target = "_blank"} is a [Docker](https://www.docker.com/){target = "_blank"} container specifically configured by us to provide you with a development environment where you can make the changes you want without having to install/setup anything locally. Simply start up a new dev container, wait for it to be built and code away!
 
-To create a new codespace (which contains the devcontainer), navigate to a [GitHub branch](https://github.com/OSIPI/OSIPI_CAPLEX/tree/main-major-development){target = "_blank"} that contains a `devcontainer.json` file. On the upper right side of the page find the `<> Code` button, click it, click on `Codespaces` (instead of `Local`) and `Create a new codespace`. Wait for the codespace to be built and start coding.
+To create a new codespace (which contains the devcontainer), navigate to a [GitHub branch](https://github.com/OSIPI/OSIPI_CAPLEX/tree/main-major-development){target = "_blank"} that contains a `devcontainer.json` file. On the upper right side of the page find the `<> Code` button, click it, click on `Codespaces` (instead of `Local`) and `Create codespace on <branch name>`. Wait for the codespace to be built and start coding.
 
 ![codespace gif](tutorialImgs/codespace gif.gif)
 
