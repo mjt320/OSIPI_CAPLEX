@@ -14,6 +14,10 @@ To create a new codespace (which contains the devcontainer), navigate to a [GitH
 
 If you're not familiar with Git, skip to parts 1 and 4 in [Setting up GitHub](#setting-up-github). In the section [Work on a local version of the website](#work-on-a-local-version-of-the-website) you don't need to use `cd`, simply write `mkdocs serve` in the terminal that opens at the bottom of your screen and the website will be built for you. If you wish to add files, such as images or gifs, from your machine to a folder in the devcontainer, simply drag the file over to the folder in the `Explorer` on the left-hand side of your screen and the file will be copied over.
 
+!!! warning
+
+    Once you're done using the codespace, please make sure to either stop or delete it. This is done by clicking on `<> Code` again, clicking on three dots next to your codespace and choosing the appropriate action.
+
 ## Install Anaconda
 
 It is advised to use a context manager and an IDE (integrated development environment) to avoid many problems that arise when setting things up. I would recommend using [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html){target = "_blank"} which installs the `conda` context manager. Conda comes bundled with several IDEs, but for this tutorial we will use Visual Studio Code (VSCode). Use the link to install Anaconda, VSCode can be installed once we set up an environment.
