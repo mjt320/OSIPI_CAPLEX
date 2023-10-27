@@ -16,12 +16,17 @@ It is advised to use a context manager and an IDE (integrated development enviro
 
 ### Installing `conda` via `winget` for Windows
 
-It is possible to install Git, VSCode and [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/){target = "_blank"} (lite version of Anaconda that only contains `conda`, Python and few basic packages) using `winget` on Windows if you're looking for a quick setup. Run the following commands:
+It is possible to install Git, VSCode and [Miniconda](https://docs.conda.io/projects/miniconda/en/latest/){target = "_blank"} (1) (lite version of Anaconda that only contains `conda`, Python and few basic packages) using `winget` on Windows if you're looking for a quick setup. Run the following commands:
+{ .annotate }
+
+1.  If you still want full version of Anaconda use `winget install -e --id Anaconda.Anaconda3` instead.
+
 ```
 winget install -e --id Git.Git
 winget install -e --id Anaconda.Miniconda3
 winget install -e --id Microsoft.VisualStudioCode
 ```
+
 then continue with the tutorial, except you do not need to install VSCode anymore.
 
 ## Set up conda environment
