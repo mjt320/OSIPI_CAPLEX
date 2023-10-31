@@ -26,7 +26,7 @@ At the top of the webpage, you may find the `Search` bar allowing you to find re
 
 <b><font color=#FF0000>Please [let us know](https://forms.gle/dsfUEZx6P91rBwJe6){target="_blank"} if the zoom needs to be increased for any particular equation.</font></b>
 
-You can zoom into equations by double-clicking on them.
+You can zoom into equations by double-clicking on them. $\text{Try me!}$
 
 !!! warning
     
