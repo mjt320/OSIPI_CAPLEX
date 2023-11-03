@@ -16,7 +16,7 @@
 }
 /* Control hyperlink button properties */
 .md-button.md-button--hyperlink {
+    /* top | right | bottom | left */
     padding: 3px 2px;
-    margin: 0;
     font-size: 12px;
 }
