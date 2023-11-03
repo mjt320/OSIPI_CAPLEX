@@ -1,8 +1,10 @@
 <b><font color=#FF0000>If you follow this tutorial but find yourself stuck, please submit an issue in the <a id="tutorialIssue" href="https://github.com/OSIPI/OSIPI_CAPLEX/issues">github repository</a> and include all steps you have taken and the full traceback to the error you've encountered so we may improve this page.</font></b>
 
-This is a basic tutorial on how to contribute to the website if you've never used github, git or written any code for a website before.
+This is a basic tutorial on how to contribute to the website if you've never used github, git or written any code for a website before. You can either [use a remote environment](#work-in-a-new-development-container) via GitHub, or [use your local machine](#install-anaconda).
 
 [Click here](#where-to-find-documentation) to skip the "setting up workspace" tutorial.
+
+<font size=5>Work in a remote environment</font>
 
 ## Work in a new development container
 
@@ -18,9 +20,11 @@ If you're not familiar with Git, skip to parts 1 and 4 in [Setting up GitHub](#s
 
     Once you're done using the codespace, please make sure to either stop or delete it. This is done by clicking on `<> Code` again, clicking on three dots next to your codespace and choosing the appropriate action. If GitHub is stuck on finding your codespace, refresh the page and try again.
 
+<font size=5>Work on your local machine</font>
+
 ## Install Anaconda
 
-It is advised to use a context manager and an IDE (integrated development environment) to avoid many problems that arise when setting things up. I would recommend using [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html){target = "_blank"} which installs the `conda` context manager. Conda comes bundled with several IDEs, but for this tutorial we will use Visual Studio Code (VSCode). Use the link to install Anaconda, VSCode can be installed once we set up an environment.
+It is advised to use a context manager and an IDE (integrated development environment) to avoid many problems that arise when setting up your environment. I would recommend using [Anaconda](https://docs.anaconda.com/free/anaconda/install/index.html){target = "_blank"} which installs the `conda` context manager. Conda comes bundled with several IDEs, but for this tutorial we will use Visual Studio Code (VSCode). Use the link to install Anaconda, VSCode can be installed once we set up an environment.
 
 ### Installing `conda` via `winget` for Windows
 
