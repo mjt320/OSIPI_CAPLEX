@@ -193,6 +193,7 @@ Build a local version of the site so you can see changes take place immediately.
 
 ## Where to find documentation
 
+The [basic syntax](https://www.markdownguide.org/basic-syntax/){target = "_blank"} in `.md` files is [Markdown](https://daringfireball.net/projects/markdown/){target = "_blank"} ([cheat sheet](https://www.markdownguide.org/cheat-sheet/){target = "_blank"} and [extended syntax](https://www.markdownguide.org/extended-syntax/){target = "_blank"}).<br>
 This website is built using [mkdocs-material](https://squidfunk.github.io/mkdocs-material/){target = "_blank"}.<br>
 Equations are rendered using [MathJax version 2.7.7](https://docs.mathjax.org/en/v2.7-latest/){target = "_blank"}.<br>
 Resources for the lexicon are stored in a Google Drive; ask [Ben Dickie](mailto:ben.dickie@manchester.ac.uk) for access.
