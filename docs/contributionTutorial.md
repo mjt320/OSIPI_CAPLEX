@@ -261,7 +261,7 @@ After that, the first row may be added by adding another line of `| -- | -- | --
 ```
 | Code | OSIPI name| Alternative names|Notation|Description|Reference|
 | -- | -- | -- | -- | -- | -- |
-| M.SM2.001 | <a id="LinModel_SM2"></a> Linear model | -- | Linear | This forward model is given by the following equation: </br> $S=k \cdot R_1$ </br> with </br> [*k* (Q.GE1.009)](quantities.md#const){:target="_blank"}, </br> [*R<sub>1</sub>* (Q.EL1.001)](quantities.md#R1){:target="_blank"},</br> [*S* (Q.MS1.001)](quantities.md#S){:target="_blank"}. | -- |
+| M.SM2.001 <button class="md-button md-button--hyperlink">HYPERLINK</button> | <a id="LinModel_SM2"></a> Linear model | -- | Linear | This forward model is given by the following equation: </br> $S=k \cdot R_1$ </br> with </br> [*k* (Q.GE1.009)](quantities.md#const){:target="_blank"}, </br> [*R<sub>1</sub>* (Q.EL1.001)](quantities.md#R1){:target="_blank"},</br> [*S* (Q.MS1.001)](quantities.md#S){:target="_blank"}. | -- |
 ```
 
 The data we add into the table must be part of a single line, therefore using `enter` key to create a new line would break the formatting of the table. Instead, use the HTML break symbol `<br>` to create a new line inside of a cell.(1)
@@ -303,19 +303,22 @@ Additionally, we can add `{ loading=lazy }` in case there are many images on the
 ### 8. Adding a button for hyperlink
 
 To enhance user experience, we provide a button to copy the URL as a reference to a particular quantity, model or process. An example of adding such button would be<br>
-`<button class="md-button md-button--hyperlink" onclick="copyToClip(document.getElementById('GRE model').href)">HYPERLINK</button>`
+`<button class="md-button md-button--hyperlink">HYPERLINK</button>`
 
-- `class="md-button md-button--hyperlink"`: adds the default button properties to our button, making it visible and usable. The default properties are further changed by our class `.md-button.md-button--hyperlink` defined in `extra.css`.
+<div class="annotate" markdown>
 
-- `onclick=`: defines the commands being run when the button is clicked
-
-- `document.getElementById(ID).href`: `document` is a reference to the current webpage. `.getElementById` uses the `id=` property of your HTML elements to find the one you're after. `ID` is the `id=` provided in an anchor. `.href` pulls out the data associated with the `href=` property, which is usually a link.
+- `class="md-button md-button--hyperlink"`: adds the default button properties to our button, making it visible and usable. The default properties are further changed by our class `.md-button.md-button--hyperlink` defined in `extra.css` (1).
 
 - `HYPERLINK`: this is the text visible on the button.
 
-For example, let's say we have an anchor that looks like<br>
-`<a id="GRE model" href="#GRE model"></a>`<br>
-Here for the button to work, the `ID` becomes `'GRE model'`(1) and inside the anchor we provide the reference to this anchor using `href="#GRE model"` which is then accessed by the button.
-{ .annotate }
+</div>
 
-1.  Please note that because `onclick=` accepts a string as a parameter, the `ID` uses `''` instead of `""` to signify a string input for `.getElementById(ID)`.
+1.  The base class we use is `md-button`. To create an extension to its properties you can add a new class such as <br>`md-button--example`. In `extra.css` this would look like <br>`.md-button.md-button--example {}` which translates to <br>`class="md-button md-button--example"` (note a whitespace instead of `.`) in the HTML code.
+
+The button builds the hyperlink using the `id=` of the anchor inside the closest table cell (`tr` element). Consider the table row<br>
+
+```
+| Q.MS1.001.[j] <button class="md-button md-button--hyperlink">COPY LINK</button> | <a id="S"></a> Signal | -- | *S<sub>j</sub>* | The MR signal (magnitude, phase or complex depending on context) in compartment *j*. | a.u. | -- |
+```
+
+First cell contains the button, second cell contains `<a id="S"></a> Signal`. The anchor needs to be supplied together with the button for correct functioning. The button functionality is added automaticaly using a script defined in `javascripts/extra.js`.
