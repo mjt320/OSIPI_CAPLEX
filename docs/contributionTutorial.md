@@ -303,13 +303,13 @@ Additionally, we can add `{ loading=lazy }` in case there are many images on the
 ### 8. Adding a button for hyperlink
 
 To enhance user experience, we provide a button to copy the URL as a reference to a particular quantity, model or process. An example of adding such button would be<br>
-`<button class="md-button md-button--hyperlink">HYPERLINK</button>`
+`<button class="md-button md-button--hyperlink">COPY LINK</button>`
 
 <div class="annotate" markdown>
 
 - `class="md-button md-button--hyperlink"`: adds the default button properties to our button, making it visible and usable. The default properties are further changed by our class `.md-button.md-button--hyperlink` defined in `extra.css` (1).
 
-- `HYPERLINK`: this is the text visible on the button.
+- `COPY LINK`: this is the text visible on the button.
 
 </div>
 

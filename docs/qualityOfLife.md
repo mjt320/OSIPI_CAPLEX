@@ -4,9 +4,7 @@ This section will introduce you to some tools available on this website to make 
 
 ## Copying reference to table data for publications
 
-<b><font color=#FF0000>This feature is currently worked on. More buttons will be added in the future.</font></b>
-
-Inside the data tables you can find a button saying `HYPERLINK`. Click on it and the reference to the data cell will be copied into your clipboard. You can use this reference in your publications.
+Inside the data tables you can find a button saying `COPY LINK`. Click on it and the reference to the data cell will be copied into your clipboard. You can use this reference in your publications.
 
 ## Copying reference DOI
 
