@@ -315,7 +315,7 @@ To enhance user experience, we provide a button to copy the URL as a reference t
 
 1.  The base class we use is `md-button`. To create an extension to its properties you can add a new class such as <br>`md-button--example`. In `extra.css` this would look like <br>`.md-button.md-button--example {}` which translates to <br>`class="md-button md-button--example"` (note a whitespace instead of `.`) in the HTML code.
 
-The button builds the hyperlink using the `id=` of the anchor inside the closest table cell (`tr` element). Consider the table row<br>
+The button builds the hyperlink using the `id=` of the anchor inside the closest table row (`tr` element). Consider the table row<br>
 
 ```
 | Q.MS1.001.[j] <button class="md-button md-button--hyperlink">COPY LINK</button> | <a id="S"></a> Signal | -- | *S<sub>j</sub>* | The MR signal (magnitude, phase or complex depending on context) in compartment *j*. | a.u. | -- |
