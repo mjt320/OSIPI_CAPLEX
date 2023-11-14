@@ -20,7 +20,8 @@ The items in this group are related to the MR signal and quantities of the MR se
 | Q.MS1.012 <button class="md-button md-button--hyperlink">COPY LINK</button> | <a id="N k-space"></a> Total number of k-space lines | -- | *N* | The total number of phase encoding lines for acquiring an image. | -- | -- |
 | Q.MS1.999 | <a id="not listed MS1"></a> Quantity not listed | -- | -- | This is a custom free-text item, which can be used if a quantity of interest is not listed. Please state a literature reference and request the item to be added to the lexicon for future usage. | [variable] | -- |
 
-## <a id="Electromagnetic quantities"></a> Electromagnetic quantities
+## <a name="Electromagnetic quantities"></a> Electromagnetic quantities
+
 The items in this group are related to electromagnetic tissue properties and electromagnetic properties of contrast agents. The abbreviations SE and GE denote spin and gradient echo.
 
 | Code | OSIPI name | Alternative names|Notation|Description|OSIPI units|Reference|
