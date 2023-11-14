@@ -16,6 +16,6 @@
 - All the required inputs to this process (quantities, models, and other processes) are defined by the lexicon entry. This approach minimises the risk the user will fail to report all the relevant information.
 
 <figure markdown>
-  ![Screenshot](structure.png){ width="1300" }
+  ![Screenshot](osipiImgs/structure.png){ width="1300" }
   <figcaption> Organization of CAPLEX sections: Quantities (Section Q), Perfusion models (Section M), Perfusion processes (Section P), General purpose processes (Section G) and Derived processes (Section D). In the flow charts, quantities are given in orange boxes, processes and models are shown in purple boxes. The pipeline shown in the    perfusion processes box represents a typical pipeline that can be encoded using quantities, processes and models currently defined within CAPLEX version 1.0.3. It is possible to encode pipelines with fewer or entirely different processes than those shown (e.g. using R2 or R2* estimation and leakage correction when reporting DSC-MRI analyses).</figcaption>
 </figure>
