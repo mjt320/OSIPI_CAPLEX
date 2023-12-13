@@ -1,12 +1,7 @@
 
 # <a id="Sections M"></a> Section M: Perfusion Models 
 
-<b><font color=#FF0000>This section is currently work in progress</font></b>
-
-
-
 ## General forward model
-
 
 | Code | OSIPI name| Alternative names|Notation|Description|Reference|
 | -- | -- | -- | -- | -- | -- |
