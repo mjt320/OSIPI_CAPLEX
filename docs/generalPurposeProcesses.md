@@ -1,5 +1,5 @@
 
-# <a id="Sections G"></a> Sections G: General purpose processes
+# <a id="Section G"></a> Section G: General purpose processes
 
 ## <a id="Forward model inversion"></a> Forward model inversion
 
