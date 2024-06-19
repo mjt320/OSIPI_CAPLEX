@@ -1,5 +1,5 @@
 
-# <a id="Section P"></a> Sections P: Perfusion Processes
+# <a id="Section P"></a> Section P: Perfusion Processes
 
 
 ## <a id="Native R1 estimation"></a> Native R1 estimation
